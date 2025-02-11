@@ -1,0 +1,471 @@
+{
+  "author": "",
+  "category": "General",
+  "extensionNamespace": "",
+  "fullName": "snow-grass-water",
+  "helpPath": "",
+  "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iSWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBkPSJNMjIuMywyNC4xYy0wLjgsMC0xLjYtMC4zLTIuMy0wLjljLTAuNS0wLjUtMS4zLTAuNS0xLjgsMGMtMS4yLDEuMi0zLjMsMS4yLTQuNSwwYy0wLjUtMC41LTEuMy0wLjUtMS44LDANCgkJYy0xLjIsMS4yLTMuMywxLjItNC41LDBjLTAuNS0wLjUtMS4zLTAuNS0xLjgsMGMtMC40LDAuNC0xLDAuNC0xLjQsMHMtMC40LTEsMC0xLjRjMS4yLTEuMiwzLjMtMS4yLDQuNSwwYzAuNSwwLjUsMS4zLDAuNSwxLjgsMA0KCQljMS4yLTEuMiwzLjMtMS4yLDQuNSwwYzAuNSwwLjUsMS4zLDAuNSwxLjgsMGMxLjItMS4yLDMuMy0xLjIsNC41LDBjMC41LDAuNSwxLjMsMC41LDEuOCwwYzEuMi0xLjIsMy4zLTEuMiw0LjUsMA0KCQljMC40LDAuNCwwLjQsMSwwLDEuNGMtMC40LDAuNC0xLDAuNC0xLjQsMGMtMC41LTAuNS0xLjMtMC41LTEuOCwwQzIzLjksMjMuOCwyMy4xLDI0LjEsMjIuMywyNC4xeiIvPg0KPC9nPg0KPGc+DQoJPHBhdGggZD0iTTguNiwyOC4xYy0wLjksMC0xLjgtMC4zLTIuNS0wLjhjLTAuNy0wLjUtMS44LTAuNS0yLjUsMGMtMC40LDAuMy0xLjEsMC4zLTEuNC0wLjFjLTAuMy0wLjQtMC4zLTEuMSwwLjEtMS40DQoJCWMxLjQtMS4xLDMuNi0xLjEsNSwwYzAuNywwLjUsMS44LDAuNSwyLjUsMGMxLjQtMS4xLDMuNi0xLjEsNSwwYzAuNywwLjUsMS44LDAuNSwyLjUsMGMxLjQtMS4xLDMuNi0xLjEsNSwwYzAuNywwLjUsMS44LDAuNSwyLjUsMA0KCQljMS40LTEuMSwzLjYtMS4xLDUsMGMwLjQsMC4zLDAuNSwxLDAuMSwxLjRjLTAuMywwLjQtMSwwLjUtMS40LDAuMWMtMC43LTAuNS0xLjgtMC41LTIuNSwwYy0xLjQsMS4xLTMuNiwxLjEtNSwwDQoJCWMtMC43LTAuNS0xLjgtMC41LTIuNSwwYy0xLjQsMS4xLTMuNiwxLjEtNSwwYy0wLjctMC41LTEuOC0wLjUtMi41LDBDMTAuNCwyNy44LDkuNSwyOC4xLDguNiwyOC4xeiIvPg0KPC9nPg0KPGc+DQoJPHBhdGggZD0iTTE2LDdjLTAuNiwwLTEtMC40LTEtMVYzYzAtMC42LDAuNC0xLDEtMXMxLDAuNCwxLDF2M0MxNyw2LjYsMTYuNiw3LDE2LDd6Ii8+DQo8L2c+DQo8Zz4NCgk8cGF0aCBkPSJNOC45LDkuOWMtMC4zLDAtMC41LTAuMS0wLjctMC4zTDYuMSw3LjVjLTAuNC0wLjQtMC40LTEsMC0xLjRzMS0wLjQsMS40LDBsMi4xLDIuMWMwLjQsMC40LDAuNCwxLDAsMS40DQoJCUM5LjQsOS44LDkuMiw5LjksOC45LDkuOXoiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGQ9Ik02LDE3SDNjLTAuNiwwLTEtMC40LTEtMXMwLjQtMSwxLTFoM2MwLjYsMCwxLDAuNCwxLDFTNi42LDE3LDYsMTd6Ii8+DQo8L2c+DQo8Zz4NCgk8cGF0aCBkPSJNMjksMTdoLTNjLTAuNiwwLTEtMC40LTEtMXMwLjQtMSwxLTFoM2MwLjYsMCwxLDAuNCwxLDFTMjkuNiwxNywyOSwxN3oiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGQ9Ik0yMy4xLDkuOWMtMC4zLDAtMC41LTAuMS0wLjctMC4zYy0wLjQtMC40LTAuNC0xLDAtMS40bDIuMS0yLjFjMC40LTAuNCwxLTAuNCwxLjQsMHMwLjQsMSwwLDEuNGwtMi4xLDIuMQ0KCQlDMjMuNiw5LjgsMjMuMyw5LjksMjMuMSw5Ljl6Ii8+DQo8L2c+DQo8cGF0aCBkPSJNMTYsOGMtNC40LDAtOCwzLjYtOCw4YzAsMS4yLDAuMywyLjMsMC44LDMuNEM4LjksMTkuOCw5LjMsMjAsOS43LDIwaDEyLjZjMC40LDAsMC43LTAuMiwwLjktMC42YzAuNS0xLjEsMC44LTIuMiwwLjgtMy40DQoJQzI0LDExLjYsMjAuNCw4LDE2LDh6IE0xOS43LDE1LjdsLTMsM2MtMC4xLDAuMS0wLjIsMC4yLTAuMywwLjJDMTYuMywxOSwxNi4xLDE5LDE2LDE5cy0wLjMsMC0wLjQtMC4xYy0wLjEtMC4xLTAuMi0wLjEtMC4zLTAuMg0KCWwtMy0zYy0wLjQtMC40LTAuNC0xLDAtMS40czEtMC40LDEuNCwwbDEuMywxLjNWMTFjMC0wLjYsMC40LTEsMS0xczEsMC40LDEsMXY0LjZsMS4zLTEuM2MwLjQtMC40LDEtMC40LDEuNCwwUzIwLjEsMTUuMywxOS43LDE1LjcNCgl6Ii8+DQo8L3N2Zz4NCg==",
+  "name": "GridTerrainDeformable",
+  "previewIconUrl": "https://asset-resources.gdevelop.io/public-resources/Icons/Glyphster Pack/Master/SVG/Weather/bab25f58bfbc79f02f75629dbbc67cc0600cc7b515b20ad97fca52daa27b63ba_Weather_sunset_sun_down_sea.svg",
+  "shortDescription": "Simulacion de nieve, pasto o lo que quieras, simulador de aguaa",
+  "version": "1.0",
+  "description": "Simulacion de nieve, pasto o lo que quieras,  al colicionar con un objeto  o grupo de objetos la malla de terreno va desapareciendo , perfecto ara simular caminar en la nieve, arena o  pasto. incluye extension para simular agua.",
+  "tags": [
+    "3d"
+  ],
+  "authorIds": [
+    "y06RW60iuLe1g115IK6SB4B2nAc2",
+    "uwB8I9EVGAMf9Wc6x4OTluMS5wf2",
+    "UL6XQkFl6HXIV2OAuAMqOJ6txuF3"
+  ],
+  "dependencies": [],
+  "globalVariables": [
+    {
+      "folded": true,
+      "name": "rainx",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "folded": true,
+      "name": "detienelluvia",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "folded": true,
+      "name": "parar",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "folded": true,
+      "name": "iniciolluvia",
+      "type": "number",
+      "value": 0
+    }
+  ],
+  "sceneVariables": [],
+  "eventsFunctions": [
+    {
+      "description": "Sand-Snow Grid",
+      "fullName": "Sand-Snow Grid",
+      "functionType": "Action",
+      "name": "sandSnow",
+      "sentence": "Sand-Snow grid:  Color: _PARAM1_ Width: _PARAM2_ Height : _PARAM3_ PosX : _PARAM4_ PosY : _PARAM5_  PosZ : _PARAM6_ Roughness: _PARAM7_ Wireframe: _PARAM8_ Segment Division Size: _PARAM9_  Opacity: _PARAM10_ 3dObject: _PARAM11_ InitMinZ:  _PARAM12_ InitMaxZ:  _PARAM13_  Radius :  _PARAM14_ Animation Speed :  _PARAM15_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "const renderer = runtimeScene.getGame().getRenderer().getThreeRenderer();",
+            "const scene = runtimeScene.getLayer('Base layer').getRenderer().getThreeScene();",
+            "const camera = runtimeScene.getLayer('Base layer').getRenderer().getThreeCamera();",
+            "",
+            "const width = eventsFunctionContext.getArgument(\"Width\");",
+            "const height = eventsFunctionContext.getArgument(\"Height\");",
+            "const posX = eventsFunctionContext.getArgument(\"PosX\");",
+            "const posY = eventsFunctionContext.getArgument(\"PosY\");",
+            "const posZ = eventsFunctionContext.getArgument(\"posZ\");",
+            "const rougV = eventsFunctionContext.getArgument(\"Roughness\");",
+            "const wireV = eventsFunctionContext.getArgument(\"Wireframe\");",
+            "const segmentV = eventsFunctionContext.getArgument(\"SegmentSize\");",
+            "const opacityV = eventsFunctionContext.getArgument(\"Opacity\");",
+            "const minzV = eventsFunctionContext.getArgument(\"InitMinZ\");",
+            "const maxzV = eventsFunctionContext.getArgument(\"InitMaxZ\");",
+            "const radiusV = eventsFunctionContext.getArgument(\"Radius\");",
+            "const speedV = eventsFunctionContext.getArgument(\"Speed\");",
+            "",
+            "const segmentsWidth = segmentV;",
+            "const segmentsHeight = segmentV;",
+            "",
+            "",
+            "const geometry = new THREE.PlaneGeometry(width, height, segmentsWidth, segmentsHeight);",
+            "geometry.rotateY(0);",
+            "",
+            "const colorA = eventsFunctionContext.getArgument(\"Color\");",
+            "const componentes = colorA.split(\";\");",
+            "const r = parseInt(componentes[0], 10);",
+            "const g = parseInt(componentes[1], 10);",
+            "const b = parseInt(componentes[2], 10);",
+            "const hex = rgbToHex(r, g, b);",
+            "",
+            "// Creacion de material",
+            "const material = new THREE.MeshStandardMaterial({",
+            "  color: hex,",
+            "  roughness: rougV,",
+            "  transparent: true,",
+            "  opacity: opacityV,",
+            "  wireframe: wireV",
+            "});",
+            "",
+            "// Creacion de la geometria",
+            "const mesh = new THREE.Mesh(geometry, material);",
+            "scene.add(mesh);",
+            "mesh.receiveShadow = true;",
+            "mesh.castShadow = false;",
+            "mesh.position.set(posX, posY, posZ); ",
+            "",
+            "",
+            "const zArreglo = new Float32Array(geometry.attributes.position.array.length / 3);",
+            "const targetMinZ = minzV;  ",
+            "const targetMaxZ = maxzV; ",
+            "const targetTouchZ = -50; ",
+            "",
+            "// Inicializo el arreglo con valores de altura irregulares",
+            "for (let i = 0; i < zArreglo.length; i++) {",
+            "  const x = geometry.attributes.position.array[i * 3];",
+            "  const y = geometry.attributes.position.array[i * 3 + 1];",
+            "  zArreglo[i] = Math.random() * (targetMaxZ - targetMinZ) + targetMinZ;",
+            "",
+            "  geometry.attributes.position.array[i * 3 + 2] = zArreglo[i];",
+            "}",
+            "",
+            "geometry.attributes.position.needsUpdate = true;",
+            "",
+            "function rgbToHex(r, g, b) {",
+            "  return `#${((1 << 24) | (r << 16) | (g << 8) | b).toString(16).slice(1).toUpperCase()}`;",
+            "}",
+            "",
+            "// Funcion actualiza altura de los vertices si existe colision ",
+            "function hundirVertices(playerPosition) {",
+            "  const vertices = geometry.attributes.position.array;",
+            "",
+            "  for (let i = 0; i < vertices.length / 3; i++) {",
+            "    // cordenadas de vertice locales a globales",
+            "    const vertexX = vertices[i * 3] + mesh.position.x;",
+            "    const vertexY = vertices[i * 3 + 1] + mesh.position.y;",
+            "",
+            "    const distance = Math.hypot(vertexX - playerPosition.x, vertexY - playerPosition.y);",
+            "",
+            "    if (distance < radiusV) { ",
+            "      zArreglo[i] = targetTouchZ; ",
+            "    }",
+            "  }",
+            "}",
+            "",
+            "function actualizarVertices() {",
+            "  const vertices = geometry.attributes.position.array;",
+            "  const speed = 1.5; ",
+            "",
+            "  for (let i = 0; i < vertices.length / 3; i++) {",
+            "    const currentZ = vertices[i * 3 + 2];",
+            "    const targetZ = zArreglo[i];",
+            "",
+            "    if (currentZ > targetZ) {",
+            "      vertices[i * 3 + 2] -= speed;",
+            "    }",
+            "  }",
+            "",
+            "  geometry.attributes.position.needsUpdate = true;",
+            "}",
+            "",
+            "function animate() {",
+            "  requestAnimationFrame(animate);",
+            "   for (let i = 0; i < objects.length; i++) {",
+            "    const player = objects[i];",
+            "    if (player) {",
+            "      const playerPosition = {",
+            "      x: player.getX(),",
+            "      y: player.getY(),",
+            "      }",
+            "    hundirVertices(playerPosition);",
+            "    }",
+            "   }   ",
+            " actualizarVertices();",
+            "}",
+            "",
+            "animate();",
+            ""
+          ],
+          "parameterObjects": "Objeto3d",
+          "useStrict": true,
+          "eventsSheetExpanded": true
+        }
+      ],
+      "parameters": [
+        {
+          "description": "color",
+          "name": "Color",
+          "type": "color"
+        },
+        {
+          "description": "Width",
+          "name": "Width",
+          "type": "expression"
+        },
+        {
+          "description": "Height",
+          "name": "Height",
+          "type": "expression"
+        },
+        {
+          "description": "PosX",
+          "name": "PosX",
+          "type": "expression"
+        },
+        {
+          "description": "PosY",
+          "name": "PosY",
+          "type": "expression"
+        },
+        {
+          "description": "PosZ ",
+          "name": "PosZ",
+          "type": "expression"
+        },
+        {
+          "description": "Roughness (0 to 1) ",
+          "name": "Roughness",
+          "type": "expression"
+        },
+        {
+          "description": "Wireframe",
+          "name": "Wireframe",
+          "type": "trueorfalse"
+        },
+        {
+          "description": "Segment Division Size",
+          "name": "SegmentSize",
+          "type": "expression"
+        },
+        {
+          "description": "Opacity (0 to 1)",
+          "name": "Opacity",
+          "type": "expression"
+        },
+        {
+          "description": "Objeto3d",
+          "name": "Objeto3d",
+          "supplementaryInformation": "Scene3D::Model3DObject",
+          "type": "objectList"
+        },
+        {
+          "description": "Minimum initial elevantion  of vertice ",
+          "name": "InitMinZ",
+          "type": "expression"
+        },
+        {
+          "description": "Max initial elevantion  of vertice ",
+          "name": "InitMaxZ",
+          "type": "expression"
+        },
+        {
+          "description": "Colission radius",
+          "name": "Radius",
+          "type": "expression"
+        },
+        {
+          "description": "Animation Speed  (1.5)",
+          "name": "Speed",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Animate Water ",
+      "fullName": "Animate water",
+      "functionType": "Action",
+      "name": "WaterbigN",
+      "sentence": "Animated Water:  Color: _PARAM1_ Width: _PARAM2_ Height : _PARAM3_ PosX : _PARAM4_ PosY : _PARAM5_  PosZ : _PARAM6_ Roughness: _PARAM7_ Wave size: _PARAM8_ Segment Division Size: _PARAM9_  Opacity: _PARAM10_  InitMinZ:  _PARAM11_ InitMaxZ:  _PARAM12_  Animation Speed :  _PARAM13_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "const scene = runtimeScene.getLayer('Base layer').getRenderer().getThreeScene();",
+            "const camera = runtimeScene.getLayer('Base layer').getRenderer().getThreeCamera();",
+            "",
+            "const width = eventsFunctionContext.getArgument(\"Width\");",
+            "const height = eventsFunctionContext.getArgument(\"Height\");",
+            "const posX = eventsFunctionContext.getArgument(\"PosX\");",
+            "const posY = eventsFunctionContext.getArgument(\"PosY\");",
+            "const posZ = eventsFunctionContext.getArgument(\"PosZ\");",
+            "const segmentV = eventsFunctionContext.getArgument(\"SegmentSize\");",
+            "const minzV = eventsFunctionContext.getArgument(\"InitMinZ\");",
+            "const maxzV = eventsFunctionContext.getArgument(\"InitMaxZ\");",
+            "const speedV = eventsFunctionContext.getArgument(\"Speed\");",
+            "const opacityV = eventsFunctionContext.getArgument(\"Opacity\");",
+            "const waveSizeV = eventsFunctionContext.getArgument(\"WaveSize\");",
+            "",
+            "const segmentsWidth = segmentV;",
+            "const segmentsHeight = segmentV;",
+            "const geometry = new THREE.PlaneGeometry(width, height, segmentsWidth, segmentsHeight);",
+            "geometry.rotateY(0);",
+            "",
+            "// Añadir un atributo personalizado para Z",
+            "const zWaveAttribute = new Float32Array(geometry.attributes.position.count);",
+            "geometry.setAttribute('waveZ', new THREE.BufferAttribute(zWaveAttribute, 1));",
+            "",
+            "// Material personalizado con degradado y simulación de olas",
+            "const material = new THREE.ShaderMaterial({",
+            "  uniforms: {",
+            "    color1: { value: new THREE.Color(0x0000ff) },",
+            "    color2: { value: new THREE.Color(0x84e1e2) },",
+            "    waveColor: { value: new THREE.Color(0xffffff) }, ",
+            "    opacity: { value: opacityV },",
+            "    minWaveZ: { value: minzV + (maxzV - minzV) * waveSizeV }, ",
+            "  },",
+            "  transparent: true,",
+            "  vertexShader: `",
+            "    attribute float waveZ; // Atributo para la posición Z",
+            "    varying vec2 vUv;",
+            "    varying float vWaveZ; // Pasar el atributo al fragment shader",
+            "    void main() {",
+            "      vUv = uv;",
+            "      vWaveZ = waveZ;",
+            "      gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);",
+            "    }",
+            "  `,",
+            "  fragmentShader: `",
+            "    uniform vec3 color1;",
+            "    uniform vec3 color2;",
+            "    uniform vec3 waveColor;",
+            "    uniform float opacity;",
+            "    uniform float minWaveZ;",
+            "    varying vec2 vUv;",
+            "    varying float vWaveZ;",
+            "    void main() {",
+            "      vec3 color = mix(color1, color2, vUv.y); // Degradado en Y",
+            "",
+            "      // Si la posición Z del vértice es mayor que el umbral, pinta de blanco",
+            "      if (vWaveZ > minWaveZ) {",
+            "        color = waveColor;",
+            "      }",
+            "",
+            "      gl_FragColor = vec4(color, opacity);",
+            "    }",
+            "  `,",
+            "});",
+            "",
+            "const mesh = new THREE.Mesh(geometry, material);",
+            "scene.add(mesh);",
+            "mesh.receiveShadow = true;",
+            "mesh.castShadow = false;",
+            "mesh.position.set(posX, posY, posZ);",
+            "",
+            "const zArreglo = new Float32Array(geometry.attributes.position.count);",
+            "const waveSpeeds = new Float32Array(zArreglo.length);",
+            "",
+            "",
+            "for (let i = 0; i < zArreglo.length; i++) {",
+            "  zArreglo[i] = Math.random() * (maxzV - minzV) + minzV;",
+            "  waveSpeeds[i] = Math.random() * speedV; ",
+            "  geometry.attributes.position.array[i * 3 + 2] = zArreglo[i];",
+            "  zWaveAttribute[i] = zArreglo[i]; ",
+            "}",
+            "",
+            "geometry.attributes.position.needsUpdate = true;",
+            "geometry.attributes.waveZ.needsUpdate = true; ",
+            "",
+            "function actualizarVertices() {",
+            "  const vertices = geometry.attributes.position.array;",
+            "",
+            "  for (let i = 0; i < vertices.length / 3; i++) {",
+            "    const time = performance.now() / 1000; // Tiempo en segundos",
+            "    zArreglo[i] = minzV + (maxzV - minzV) * 0.5 * (1 + Math.sin(time * waveSpeeds[i]));",
+            "    vertices[i * 3 + 2] = zArreglo[i];",
+            "    zWaveAttribute[i] = zArreglo[i]; ",
+            "  }",
+            "",
+            "  geometry.attributes.position.needsUpdate = true;",
+            "  geometry.attributes.waveZ.needsUpdate = true; ",
+            "}",
+            "",
+            "",
+            "function animate() {",
+            "  requestAnimationFrame(animate);",
+            "  actualizarVertices();",
+            "}",
+            "",
+            "animate();",
+            "",
+            ""
+          ],
+          "parameterObjects": "Objeto3d",
+          "useStrict": true,
+          "eventsSheetExpanded": true
+        }
+      ],
+      "parameters": [
+        {
+          "description": "color",
+          "name": "Color",
+          "type": "color"
+        },
+        {
+          "description": "Width",
+          "name": "Width",
+          "type": "expression"
+        },
+        {
+          "description": "Height",
+          "name": "Height",
+          "type": "expression"
+        },
+        {
+          "description": "PosX",
+          "name": "PosX",
+          "type": "expression"
+        },
+        {
+          "description": "PosY",
+          "name": "PosY",
+          "type": "expression"
+        },
+        {
+          "description": "PosZ ",
+          "name": "PosZ",
+          "type": "expression"
+        },
+        {
+          "description": "Roughness (0 to 1) ",
+          "name": "Roughness",
+          "type": "expression"
+        },
+        {
+          "description": "Wave size (0.8)",
+          "name": "WaveSize",
+          "type": "expression"
+        },
+        {
+          "description": "Segment Division Size",
+          "name": "SegmentSize",
+          "type": "expression"
+        },
+        {
+          "description": "Opacity (0 to 1)",
+          "name": "Opacity",
+          "type": "expression"
+        },
+        {
+          "description": "Minimum initial elevantion  of vertice ",
+          "name": "InitMinZ",
+          "type": "expression"
+        },
+        {
+          "description": "Max initial elevantion  of vertice ",
+          "name": "InitMaxZ",
+          "type": "expression"
+        },
+        {
+          "description": "Animation Speed  (1.5)",
+          "name": "Speed",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    }
+  ],
+  "eventsBasedBehaviors": [],
+  "eventsBasedObjects": []
+}
